@@ -1,0 +1,8 @@
+nohup.out
+*_no_logs.rb
+/public/system
+/log
+/tmp
+*.pid
+*swp
+*swo
