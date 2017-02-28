@@ -1,5 +1,5 @@
-$(function(){
-	setTimeout(() => {
-		$('.notice, .alert').hide();
-	},5000)
-});
+// $(function(){
+//   setTimeout(() => {
+//     $('.notice, .alert').hide();
+//   },5000)
+// });
