@@ -28,7 +28,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">注册 | 登录</a></li>
+            <%if current_user.blank? %>
+              <li><a href="/users/sign_in">注册 | 登录</a></li>
+            <% else %>
+              <li><%= link_to "#{current_user.email}, Sign out", '/users/sign_out', :method => :delete%><li>
+            <% end %>
             <li><a href="#">购物车</a></li>
             <li><a href="#">我的收藏</a></li>
             <li><a href="#">物流追踪</a></li>
