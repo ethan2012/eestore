@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: db/eestore
+  database: hobby-dev
