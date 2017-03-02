@@ -29,7 +29,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <%if current_user.blank? %>
-              <li><a href="/users/sign_in">注册 | 登录</a></li>
+              <li><p><a href="/users/sign_up">注册</a> | <a href="/users/sign_in">登录</a><p></li>
             <% else %>
               <li><%= link_to "#{current_user.email}, Sign out", '/users/sign_out', :method => :delete%><li>
             <% end %>

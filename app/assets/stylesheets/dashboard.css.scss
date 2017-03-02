@@ -101,3 +101,24 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+.navbar-inverse .navbar-nav > li > p > a {
+  color: #777777;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+  position: relative;
+  &:nth-child(1){
+    padding: 10px 0px 10px 15px;
+  }
+  &:nth-child(2){
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
