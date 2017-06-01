@@ -4,7 +4,11 @@
     <meta name="turbolinks-cache-control" content="no-cache">
   </head>
   <body>
-    <%= react_component("PublishContainer", { greeting: "Hello" }) %>
+    <%= react_component("PublishContainer", { 
+      tops: @tops,
+      middles: @middles,
+      bottoms: @bottoms,
+    }) %>
   </body>
   
  </html>

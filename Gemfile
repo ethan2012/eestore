@@ -38,7 +38,15 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.2'
 
+# gem to use react
 gem "react-rails"
+
+# gem to use migration data
+gem 'data_migrate'
+
+# gem to use paperclip and S3
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

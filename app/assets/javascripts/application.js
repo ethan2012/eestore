@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require classnames
 //= require react
 //= require react_ujs
+//= require react-input-autosize
+//= require react-select
 //= require components
 //= require bootstrap-sprockets
 //= require_tree .
