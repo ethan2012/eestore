@@ -53,4 +53,14 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: "eestores",
+      access_key_id: "AKIAJX37VZSKBPZQMD3A",
+      secret_access_key: "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",
+      s3_region: "US Standard",
+    }
+  }
 end

@@ -9,6 +9,19 @@
       middles: @middles,
       bottoms: @bottoms,
     }) %>
+    <%= form_for(Product.new, multipart: true) do |f| %>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Create' %>
+      </div>
+    <% end %>
   </body>
   
  </html>
