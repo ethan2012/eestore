@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="turbolinks-cache-control" content="no-cache">
+  </head>
+  <body>
+    <%= react_component("ProductContainer", { 
+      product: @product,
+      images: @product.product_images.map(&:avatar),
+      info: @product.product_info
+    }) %>
+  </body>
+  
+ </html>

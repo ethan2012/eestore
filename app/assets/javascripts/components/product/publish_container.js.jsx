@@ -49,6 +49,12 @@ class PublishContainer extends React.Component {
     });
   }
 
+  display_category_info() {
+    this.setState({
+      display_basic_info: false
+    });
+  }
+
   render(){
     let that = this;
     let bottoms = this.state.bottoms.filter((bottom) => {return bottom.category_middle_id == that.state.middle_id});
@@ -84,6 +90,7 @@ class PublishContainer extends React.Component {
         {this.state.display_basic_info && 
           <ProductBasicInfo 
             bottom_id = {this.state.bottom_id}
+            display_category_info = {this.display_category_info.bind(this)}
           />
         }
       </div>
