@@ -80,9 +80,8 @@ class ProductBasicInfo extends React.Component {
       this.state.width_error == null &&
       this.state.height_error == null &&
       this.state.width_error == null){
-      console.log('good');
+      console.log('validation passed');
     }else{
-      console.log('bad');
       return;
     }
     let formData = new FormData();

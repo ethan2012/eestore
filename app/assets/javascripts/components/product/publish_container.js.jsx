@@ -3,7 +3,7 @@ class PublishContainer extends React.Component {
     super(props);
     let that = this;
     this.state = {
-      display_basic_info: true,
+      display_basic_info: false,
       middle_id: this.props.middles[0].id, // take the first middle category as default
       bottom_id: this.props.bottoms.filter((bottom) => {return bottom.category_middle_id == that.props.middles[0].id})[0].id, //take the first bottom category as default
       middles: this.props.middles.map((middle) => {return {name: middle.name, id: middle.id, level: "middle"} }),

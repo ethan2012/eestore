@@ -13,9 +13,10 @@ class ProductContainer extends React.Component {
     }
     return(
       <div className="container">
-        <span className="btn btn-primary btn-file"><span onClick={this.props.display_user_info}>返回</span></span>
+        <span className="btn btn-primary btn-file"><span onClick={ () => {window.location.href= "/users/" + this.props.currentUserId }}>返回</span></span>
         <h4>基本信息</h4>
         <div className="form-group">
+          <p><label>总类: {this.props.category.middle.name} -> {this.props.category.bottom.name}</label></p>
           <p><label>标题: {this.props.product.name}</label></p>
           <p><label>一口价: {this.props.product.price}</label></p>
           <p><label>商品数量: {this.props.product.number}</label></p>
