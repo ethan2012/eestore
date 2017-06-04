@@ -32,6 +32,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def index
+    @products = Product.where(user: current_user)
+  end
+
   def show
     @product = Product.find(params[:id])
   end
