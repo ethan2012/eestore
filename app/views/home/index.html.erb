@@ -33,7 +33,9 @@
               <li><%= link_to "#{current_user.email}, Sign out", '/users/sign_out', :method => :delete%><li>
             <% end %>
             <li><a href="#">购物车</a></li>
-            <li><a href="#">我的收藏</a></li>
+            <% if current_user.present? %>
+              <li><a href="/users/<%= current_user.id%>" >我的主页</a></li>
+            <% end %>
             <li><a href="#">物流追踪</a></li>
           </ul>
           <form class="navbar-form navbar-right">
