@@ -39,7 +39,8 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height:50vw;
+  height:30vw;
+  box-shadow: 10px 10px 50px 20px grey inset;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -48,15 +49,68 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 50vw;
+  height: 30vw;
   background-color: #777;
 }
+
+.carousel-sider {
+  display: block;
+  width: 20%;
+  position: relative;
+  float: left;
+  height: 30vw;
+  border-bottom: 1px solid #ddd;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  float: left;
+}
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 50vw;
+  height: 30vw;
+  float: left;
+}
+
+.left.carousel-control{
+  left: 20%;
+}
+
+.right.carousel-control{
+  right: 20%;
+}
+
+@media (max-width: 768px){
+  .carousel-sider {
+    display: none;
+  }
+  .carousel-inner {
+    min-width: 100%;
+    clear: both;
+  }
+  .carousel {
+    height: 50vw;
+  }
+  .carousel .item {
+    height: 50vw;
+  }
+  .carousel-inner > .item > img {
+    min-width: 100%;
+    height: 50vw;
+  }
+  .left.carousel-control{
+    left: 0;
+  }
+
+  .right.carousel-control{
+    right: 0;
+  }
 }
 
 /* MARKETING CONTENT

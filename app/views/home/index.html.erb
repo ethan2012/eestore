@@ -30,7 +30,9 @@
             <%if current_user.blank? %>
               <li><p><a href="/users/sign_up">注册</a> | <a href="/users/sign_in">登录</a><p></li>
             <% else %>
-              <li><%= link_to "#{current_user.email}, Sign out", '/users/sign_out', :method => :delete%><li>
+              <li>
+              <%= link_to "退出登录", '/users/sign_out', :method => :delete%>
+              </li>
             <% end %>
             <li><a href="#">购物车</a></li>
             <% if current_user.present? %>
@@ -55,6 +57,14 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
+      <div class="carousel-sider">
+        <ul class="nav nav-sidebar">
+          <li class="active"><a href="#">物美价廉<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">流行女装</a></li>
+          <li><a href="#">时尚男装</a></li>
+          <li><a href="#">今天特惠</a></li>
+        </ul>
+      </div>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img class="first-slide" src="/images/1.jpg" alt="First slide">
@@ -97,6 +107,15 @@
           </div>
         </div>
       </div>
+      <div class="carousel-sider">
+        <ul class="nav nav-sidebar">
+          <li><a href="">数位周边</a></li>
+          <li><a href="">居家生活</a></li>
+          <li><a href="">鞋类箱包</a></li>
+          <li><a href="">手表配饰</a></li>
+          <li><a href="">流行数码</a></li>
+        </ul>
+      </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -109,28 +128,9 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">物美价廉<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">流行女装</a></li>
-            <li><a href="#">时尚男装</a></li>
-            <li><a href="#">今天特惠</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">数位周边</a></li>
-            <li><a href="">居家生活</a></li>
-            <li><a href="">鞋类箱包</a></li>
-            <li><a href="">手表配饰</a></li>
-            <li><a href="">流行数码</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">电子商城</a></li>
-            <li><a href="">妇幼玩具</a></li>
-            <li><a href="">户外运动</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-9 col-md-10 main">
-          <h1 class="page-header">Best Sellers</h1>
+        
+        <div class="col-sm-12 col-md-12 main">
+          <h1 class="page-header">热销分类</h1>
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
@@ -155,134 +155,11 @@
             </div>
           </div>
 
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h2 class="sub-header">热销产品</h2>
+          
+          <%= react_component("MainPageProducts", { 
+            products: Product.all.as_json,
+          }) %>
 
           <hr class="featurette-divider">
           <!-- FOOTER -->

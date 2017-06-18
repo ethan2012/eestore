@@ -49,9 +49,11 @@ body {
 
 /* Sidebar navigation */
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
+  margin: 0;
+}
+.nav-sidebar > li{
+  font-size: 14px;
+  text-align: center;
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
@@ -62,6 +64,26 @@ body {
 .nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca;
+}
+
+@media (max-width: 992px){
+  .nav-sidebar > li{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px){
+  .nav-sidebar > li{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px){
+  .nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
 }
 
 
