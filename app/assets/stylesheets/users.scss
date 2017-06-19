@@ -29,3 +29,28 @@
 .block-center{
   margin: 0 auto;
 }
+
+.img-circle {
+  border-radius: 50%;
+}
+
+@media (max-width: 992px){
+  .img-circle {
+    height: 160px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px){
+  .img-circle {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 992px){
+  .img-circle {
+    height: 200px;
+    width: 200px;
+  }
+}

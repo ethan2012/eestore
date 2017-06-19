@@ -10,6 +10,7 @@ class ProductBasicInfo extends React.Component {
       width_error: null,
       height_error: null,
       weight_error: null,
+      image_error: null,
       show_spinner: false
     }
   }
@@ -61,6 +62,11 @@ class ProductBasicInfo extends React.Component {
     this.setState({
       images: new_file_list
     });
+    if(new_file_list.length > 0){
+      this.setState({
+        image_error: null
+      });
+    }
   }
 
 
@@ -79,7 +85,8 @@ class ProductBasicInfo extends React.Component {
       this.state.length_error == null &&
       this.state.width_error == null &&
       this.state.height_error == null &&
-      this.state.width_error == null){
+      this.state.width_error == null &&
+      this.state.image_error == null){
       console.log('validation passed');
     }else{
       return;
@@ -131,6 +138,7 @@ class ProductBasicInfo extends React.Component {
     this.validate_width();
     this.validate_height();
     this.validate_weight();
+    this.validate_images();
   }
 
   validate_name() {
@@ -211,6 +219,16 @@ class ProductBasicInfo extends React.Component {
      weight_error = "请输入大于零的数字，小数点保留两位！";
     }
     this.setState({ weight_error });
+  }
+
+  validate_images() {
+    let image_error;
+    if(this.state.images.length == 0){
+      image_error = "请上传至少一张图片！";
+    }else{
+      image_error = null;
+    }
+    this.setState({ image_error });
   }
 
   render(){
@@ -302,7 +320,10 @@ class ProductBasicInfo extends React.Component {
               }
             </div>
           }
-          
+          {
+            this.state.image_error != null &&
+            <div><span>{this.state.image_error}</span></div>
+          }
           <br/>
           <label>商品尺寸</label>
           <div className="form-group">
