@@ -48,6 +48,13 @@
   }
 }
 
+@media (max-width: 500px){
+  .img-circle {
+    height: 120px;
+    width: 120px;
+  }
+}
+
 @media (min-width: 992px){
   .img-circle {
     height: 200px;
