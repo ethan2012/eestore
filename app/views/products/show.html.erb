@@ -8,7 +8,7 @@
       product: @product,
       images: @product.product_images.map(&:avatar),
       info: @product.product_info,
-      currentUserId: current_user.id,
+      currentUserId: current_user.present? ? current_user.id : nil,
       category: {middle: @product.category_bottom.category_middle, bottom: @product.category_bottom}
     }) %>
   </body>

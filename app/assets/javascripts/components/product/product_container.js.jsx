@@ -13,7 +13,13 @@ class ProductContainer extends React.Component {
     }
     return(
       <div className="container">
-        <span className="btn btn-primary btn-file"><span onClick={ () => {window.location.href= "/users/" + this.props.currentUserId }}>返回</span></span>
+        <span className="btn btn-primary btn-file"><span onClick={ () => {
+          if(this.props.currentUserId){
+            window.location.href= "/users/" + this.props.currentUserId;
+          }else{
+            window.location.href= "/";
+          }
+        }}>返回</span></span>
         <h4>基本信息</h4>
         <div className="form-group">
           <p><label>总类: {this.props.category.middle.name} -> {this.props.category.bottom.name}</label></p>
