@@ -10,7 +10,7 @@ Things you may want to cover:
 
 * System dependencies: macOS
 
-* Configuration: to get all gems, run: bundle install, DONOT run: bundle update, since it will update gem lock file with latest version. That could cause unexpected conflicts.
+* Configuration: to get all gems, cd project folder, run: bundle install, DONOT run: bundle update, since it will update gem lock file with latest version. That could cause unexpected conflicts.
 
 * Database: postgres, https://www.postgresql.org/download/macosx/
   download installer
