@@ -48,6 +48,9 @@ gem 'data_migrate'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
 
+# gem cancancan for authorization
+gem 'cancancan', '~> 2.0'
+
 # gem font-awesome
 gem "font-awesome-rails"
 

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  load_and_authorize_resource
   def new
     @tops = CategoryTop.all
     @middles = CategoryMiddle.all
@@ -37,6 +38,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    puts @product
     @product = Product.find(params[:id])
   end
 
