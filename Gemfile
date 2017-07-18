@@ -35,6 +35,9 @@ gem 'autoprefixer-rails'
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
+# gem for admin to manage users and others
+gem 'activeadmin'
+
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.2'
 
