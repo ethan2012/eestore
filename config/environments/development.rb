@@ -63,4 +63,6 @@ Rails.application.configure do
       s3_region: "US Standard",
     }
   }
+
+  config.npm.browserify_options = "browserify -r 'class-to-classname'"
 end

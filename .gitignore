@@ -5,4 +5,5 @@ nohup.out
 /tmp
 *.pid
 *swp
-*swo
+*swo# Added by npm-rails
+/node_modules

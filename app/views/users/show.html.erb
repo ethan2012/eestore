@@ -34,8 +34,7 @@
                                                         <p class="text-center small">
                                                             <a href="./3X6zm">Change Photo</a></p>
                                                     </div>
-                                                    <div class="col-md-7">
-                                                        <span><%= current_user.email%></span>
+                                                    <div class="col-xs-7">
                                                         <div class="divider">
                                                         </div>
                                                         <a href="./56ExR" class="btn btn-default btn-xs"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a>
@@ -77,7 +76,7 @@
                         <div class="media-body">
                             <hr>
                             <h3><strong>Bio</strong></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel gravida metus, non ultrices sapien. Morbi odio metus, dapibus non nibh id amet.</p>
+                            <p></p>
                             <hr>
                             <h3><strong>Location</strong></h3>
                             <p>Earth</p>
@@ -86,7 +85,7 @@
                             <p>Unknown</p>
                             <hr>
                             <h3><strong>Birthday</strong></h3>
-                            <p>January 01 1901</p>
+                            <p>Unknown</p>
                         </div>
                     </div>
                 </div>
@@ -95,20 +94,9 @@
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <span>
-                      <p>
-                        <h1 class="panel-title" style="font-size:30px;"> <small>邮箱：<%= current_user.email%></small> <i class="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="<%= current_user.email%> is sharing with you"></i></h1>
-                      </p>
-                      <p>
-                        <h1 class="panel-title" style="font-size:30px;"> <small>地址：<%= current_user.email%></small> </h1>
-                      </p>
-                      <p>
-                        <h1 class="panel-title" style="font-size:30px;"> <small>姓名：<%= current_user.email%></small> </h1>
-                      </p>
-                      <p>
-                        <h1 class="panel-title" style="font-size:30px;"> <small>证件号码：<%= current_user.email%></small> </h1>
-                      </p>
-                    </span>
+                    <%= react_component("UserProfile", { 
+                      user: @user
+                    }) %>
                     <br><br>
                     <br><br><hr>
                     <span class="pull-left">
