@@ -64,5 +64,4 @@ Rails.application.configure do
     }
   }
 
-  config.npm.browserify_options = "browserify -r 'class-to-classname'"
 end

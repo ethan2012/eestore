@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require npm-dependencies
 //= require classnames
 //= require react
 //= require react_ujs
