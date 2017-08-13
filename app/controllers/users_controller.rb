@@ -41,4 +41,8 @@ class UsersController < ApplicationController
       format.json { render :json => { :user => @user } }
     end
   end
+
+  def approve
+    
+  end
 end

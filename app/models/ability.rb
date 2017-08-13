@@ -10,12 +10,12 @@ class Ability
     end
 
     if user.publish_product
-      can [:create, :new], Product
+      can :create, Product
     end
 
     can [:show, :update], User, {:id => user.id}
 
-    can [:show, :index], Product
+    can [:show, :index, :new], Product
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

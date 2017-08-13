@@ -8,11 +8,11 @@ class User < ApplicationRecord
 
   has_and_belongs_to_many :roles
   def admin?
-    false
+    self.class == AdminUser
   end
 
   def publish_product
-  	self.roles.include? "product"
+  	self.roles.include? (Role.find_by(name: "product"))
   end
 
   def address
