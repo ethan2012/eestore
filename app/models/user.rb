@@ -16,15 +16,27 @@ class User < ApplicationRecord
   end
 
   def address
-    self.profile.address
+    if self.profile.present?
+      self.profile.address
+    else
+      nil
+    end
   end
 
   def full_name
-    self.profile.full_name
+    if self.profile.present?
+      self.profile.full_name
+    else
+      nil
+    end
   end
 
   def id_number
-    self.profile.id_number
+    if self.profile.present?
+      self.profile.id_number
+    else
+      nil
+    end
   end
 
   def id_images
