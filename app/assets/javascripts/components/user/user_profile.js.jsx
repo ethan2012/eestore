@@ -199,7 +199,7 @@ class UserProfile extends React.Component {
             }
           </div>
         }
-        { (this.state.images.length == 0 && this.state.previous_images.length > 0 )&&
+        { (this.state.images.length == 0 && this.state.previous_images && this.state.previous_images.length > 0 )&&
           <div className="container">
             <div className="col-xs-12 col-sm-4 col-md-3 mt-1 mb-2">
               <img className="images_preview image_middle"  height="100" width="200" src={this.state.previous_images[0]} alt="your image" ref = {(img) => { this.img1 = img; } } />
