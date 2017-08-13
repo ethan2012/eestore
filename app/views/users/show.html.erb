@@ -14,8 +14,11 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li><a href="/products/new">发布商品</a></li>
-                                <li><a href="/products">我发布的商品</a></li>
+                                <% if @user.publish_product %>
+                                    <li><a href="/products/new">发布商品</a></li>
+                                <% else %>
+                                    <li><a href="#" id="apply_to_publish">申请发布商品</a></li>
+                                <% end %>
                                 <li><span class="badge badge-important">0</span><a href="#"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a></li>
                             </ul>
@@ -114,3 +117,14 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        console.log( "ready!" );
+        $('#apply_to_publish').on('click', function(){
+            $('#update_profile').click();
+            $('.navbar-toggle').click();
+        });
+    });
+    
+</script>

@@ -10,8 +10,10 @@ class Ability
     end
 
     if user.publish_product
-      can :create, Product
+      can [:create, :new], Product
     end
+
+    can [:show, :update], User, {:id => user.id}
 
     can [:show, :index], Product
     #

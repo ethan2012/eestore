@@ -19,14 +19,14 @@ class ProductBasicInfo extends React.Component {
     if(this.state.images.length > 0){
       let that = this;
       this.img1.src = document.URL + "#";
-      if(this.state.length > 2){
+      if(this.state.images.length > 1){
         this.img2.src = document.URL + "#";
       }
-      if(this.state.length > 3){
+      if(this.state.images.length > 2){
         this.img3.src = document.URL + "#";
       }
-      if(this.state.length > 4){
-        this.img3.src = document.URL + "#";
+      if(this.state.images.length > 3){
+        this.img4.src = document.URL + "#";
       }
       
       for(let i = 0; i < this.state.images.length; i++){
