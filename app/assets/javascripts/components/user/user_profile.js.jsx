@@ -119,6 +119,22 @@ class UserProfile extends React.Component {
     return(
       <div>
         <div>
+          <div>物流储值</div>
+          <div>当前余额: 0.00元</div>
+          <img class="second-slide" src="/images/zhifubao.jpg" alt="Second slide" />
+          <div>
+            <p>请输入您要充值的金额，充值成功后，充值金额会自动显示在您的账户中</p>
+            请输入您要充值的金额: <input type="text" ref={(input) => { this.pay = input}} className="panel-title"  />
+            &nbsp;&nbsp;&nbsp;
+            <button id="update_profile" className="btn btn-success" type="button" aria-haspopup="true" aria-expanded="true" >
+              充值
+            </button>
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div>
           <span className="panel-title" style={fontStyle}> 
             <span className="panel-title">邮箱:</span> 
           </span>
