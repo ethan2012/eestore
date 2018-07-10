@@ -15,6 +15,7 @@ Things you may want to cover:
 * Database: postgres, https://www.postgresql.org/download/macosx/
   download installer
 
+
 * Database initialization: bundle exec rake db:migrate
 
 * How to run the test suite: ruby -Itest "PathToTestFile" [-n "function name"]
