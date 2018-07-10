@@ -16,6 +16,7 @@ Things you may want to cover:
   download installer
 
 
+
 * Database initialization: bundle exec rake db:migrate
 
 * How to run the test suite: ruby -Itest "PathToTestFile" [-n "function name"]
